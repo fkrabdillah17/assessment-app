@@ -1,67 +1,427 @@
 <x-layouts>
 
     <div class="md:flex">
-        <ul class="flex-column space-y mb-4 space-y-4 text-sm font-medium text-gray-500 dark:text-gray-400 md:mb-0 md:me-4">
-            <li>
-                <a href="#" class="active inline-flex w-full items-center rounded-lg bg-blue-700 px-4 py-3 text-white dark:bg-blue-600" aria-current="page">
-                    <svg class="me-2 h-4 w-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                        <path
-                            d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm0 13a8.949 8.949 0 0 1-4.951-1.488A3.987 3.987 0 0 1 9 13h2a3.987 3.987 0 0 1 3.951 3.512A8.949 8.949 0 0 1 10 18Z" />
-                    </svg>
-                    Profile
-                </a>
+        <ul class="flex-column space-y mb-4 space-y-4 text-sm font-medium text-gray-500 dark:text-gray-400 md:mb-0 md:me-4" id="default-tab"
+            data-tabs-toggle="#default-tab-content" data-tabs-active-classes="bg-blue-500 dark:bg-blue-600"
+            data-tabs-inactive-classes="border-2 border-blue-500 text-gray-600" role="tablist">
+            <li role="presentation">
+
+                <button class="inline-flex w-full items-center rounded-lg px-4 py-3 text-white" id="profile-tab" data-tabs-target="#profile" type="button"
+                    role="tab" aria-controls="profile" aria-selected="false">
+                    PROFIL PUSKESMAS
+                </button>
             </li>
-            <li>
-                <a href="#"
-                    class="inline-flex w-full items-center rounded-lg bg-gray-50 px-4 py-3 hover:bg-gray-100 hover:text-gray-900 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white">
-                    <svg class="me-2 h-4 w-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                        viewBox="0 0 18 18">
-                        <path
-                            d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z" />
-                    </svg>
-                    Dashboard
-                </a>
+            <li role="presentation">
+                <button class="inline-flex w-full items-center rounded-lg px-4 py-3 text-white" id="general-tab" data-tabs-target="#general" type="button"
+                    role="tab" aria-controls="general" aria-selected="false">
+                    INFORMASI UMUM
+                </button>
             </li>
-            <li>
-                <a href="#"
-                    class="inline-flex w-full items-center rounded-lg bg-gray-50 px-4 py-3 hover:bg-gray-100 hover:text-gray-900 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white">
-                    <svg class="me-2 h-4 w-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                        viewBox="0 0 20 20">
-                        <path
-                            d="M18 7.5h-.423l-.452-1.09.3-.3a1.5 1.5 0 0 0 0-2.121L16.01 2.575a1.5 1.5 0 0 0-2.121 0l-.3.3-1.089-.452V2A1.5 1.5 0 0 0 11 .5H9A1.5 1.5 0 0 0 7.5 2v.423l-1.09.452-.3-.3a1.5 1.5 0 0 0-2.121 0L2.576 3.99a1.5 1.5 0 0 0 0 2.121l.3.3L2.423 7.5H2A1.5 1.5 0 0 0 .5 9v2A1.5 1.5 0 0 0 2 12.5h.423l.452 1.09-.3.3a1.5 1.5 0 0 0 0 2.121l1.415 1.413a1.5 1.5 0 0 0 2.121 0l.3-.3 1.09.452V18A1.5 1.5 0 0 0 9 19.5h2a1.5 1.5 0 0 0 1.5-1.5v-.423l1.09-.452.3.3a1.5 1.5 0 0 0 2.121 0l1.415-1.414a1.5 1.5 0 0 0 0-2.121l-.3-.3.452-1.09H18a1.5 1.5 0 0 0 1.5-1.5V9A1.5 1.5 0 0 0 18 7.5Zm-8 6a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Z" />
-                    </svg>
-                    Settings
-                </a>
-            </li>
-            <li>
-                <a href="#"
-                    class="inline-flex w-full items-center rounded-lg bg-gray-50 px-4 py-3 hover:bg-gray-100 hover:text-gray-900 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white">
-                    <svg class="me-2 h-4 w-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                        viewBox="0 0 20 20">
-                        <path
-                            d="M7.824 5.937a1 1 0 0 0 .726-.312 2.042 2.042 0 0 1 2.835-.065 1 1 0 0 0 1.388-1.441 3.994 3.994 0 0 0-5.674.13 1 1 0 0 0 .725 1.688Z" />
-                        <path
-                            d="M17 7A7 7 0 1 0 3 7a3 3 0 0 0-3 3v2a3 3 0 0 0 3 3h1a1 1 0 0 0 1-1V7a5 5 0 1 1 10 0v7.083A2.92 2.92 0 0 1 12.083 17H12a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h1a1.993 1.993 0 0 0 1.722-1h.361a4.92 4.92 0 0 0 4.824-4H17a3 3 0 0 0 3-3v-2a3 3 0 0 0-3-3Z" />
-                    </svg>
-                    Contact
-                </a>
-            </li>
-            <li>
-                <a class="inline-flex w-full cursor-not-allowed items-center rounded-lg bg-gray-50 px-4 py-3 text-gray-400 dark:bg-gray-800 dark:text-gray-500">
-                    <svg class="me-2 h-4 w-4 text-gray-400 dark:text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-                        viewBox="0 0 20 20">
-                        <path
-                            d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 11.793a1 1 0 1 1-1.414 1.414L10 11.414l-2.293 2.293a1 1 0 0 1-1.414-1.414L8.586 10 6.293 7.707a1 1 0 0 1 1.414-1.414L10 8.586l2.293-2.293a1 1 0 0 1 1.414 1.414L11.414 10l2.293 2.293Z" />
-                    </svg>
-                    Disabled</a>
+            <li role="presentation">
+                <button class="inline-flex w-full items-center rounded-lg px-4 py-3 text-white" id="assessment-tab" data-tabs-target="#assessment"
+                    type="button" role="tab" aria-controls="assessment" aria-selected="false">
+                    ASSESSMENT
+                </button>
             </li>
         </ul>
-        <div class="text-medium w-full rounded-lg bg-gray-50 p-6 text-gray-500 dark:bg-gray-800 dark:text-gray-400">
-            <h3 class="mb-2 text-lg font-bold text-gray-900 dark:text-white">Profile Tab</h3>
-            <p class="mb-2">This is some placeholder content the Profile tab's associated content, clicking another tab will toggle the visibility of this one
-                for the next.</p>
-            <p>The tab JavaScript swaps classes to control the content visibility and styling.</p>
+        {{-- Section 1 --}}
+        <div class="hidden w-full rounded-lg bg-gray-50 p-4 dark:bg-gray-800" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <h3 class="mb-2 text-lg font-bold text-gray-900 dark:text-white">Profil Puskesmas</h3>
+            <div class="mb-6">
+                <label for="name" class="mb-2 block text-sm font-medium text-gray-900 dark:text-white">Nama Puskesmas</label>
+                <input type="text" id="name" name="name"
+                    class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+                    placeholder="Nama Puskesmas" required />
+            </div>
+            <div class="mb-6">
+                <label for="address" class="mb-2 block text-sm font-medium text-gray-900 dark:text-white">Alamat Puskesmas</label>
+                <input type="text" id="address" name="address"
+                    class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+                    placeholder="Alamat Puskesmas" required />
+            </div>
+            <div class="mb-6">
+                <label for="contact" class="mb-2 block text-sm font-medium text-gray-900 dark:text-white">No Telepon/FAX</label>
+                <input type="text" id="contact" name="contact"
+                    class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+                    placeholder="No Telepon/FAX" required />
+            </div>
+            <div class="mb-6">
+                <label for="person1" class="mb-2 block text-sm font-medium text-gray-900 dark:text-white">Pimpinan/Kepala Puskesmas</label>
+                <input type="text" id="person1" name="person1"
+                    class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+                    placeholder="Pimpinan/Kepala Puskesmas" required />
+            </div>
+            <div class="mb-6">
+                <label for="person2" class="mb-2 block text-sm font-medium text-gray-900 dark:text-white">Penanggungjawab Bagian Farmasi</label>
+                <input type="text" id="person2" name="person2"
+                    class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+                    placeholder="Penanggungjawab Bagian Farmasi" required />
+            </div>
+            <div class="mb-6 grid gap-6 md:grid-cols-2">
+                <div>
+                    <label for="licence" class="mb-2 block text-sm font-medium text-gray-900 dark:text-white">SIPA / SIPTTK</label>
+                    <input type="text" id="licence" name="licence"
+                        class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+                        placeholder="SIPA / SIPTTK" required />
+                </div>
+                <div>
+                    <label for="licence" class="mb-2 block text-sm font-medium text-gray-900 dark:text-white">Berlaku hingga</label>
+                    <input datepicker type="text" id="licence" name="licence"
+                        class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+                        placeholder="01/01/2024" required />
+                </div>
+            </div>
         </div>
+        {{-- Section 2 --}}
+        <div class="hidden w-full rounded-lg bg-gray-50 p-4 dark:bg-gray-800" id="general" role="tabpanel" aria-labelledby="general-tab">
+            <h3 class="mb-2 text-lg font-bold text-gray-900 dark:text-white">Informasi Umum</h3>
+            {{-- Section 2.1 --}}
+            <h3 class="mb-4 font-semibold text-gray-900 dark:text-white">1. Jenis Sarana Puskesmas</h3>
+            <ul
+                class="w-full items-center rounded-lg border border-gray-200 bg-white text-sm font-medium text-gray-900 dark:border-gray-600 dark:bg-gray-700 dark:text-white sm:flex">
+                <li class="w-full border-b border-gray-200 dark:border-gray-600 sm:border-b-0 sm:border-r">
+                    <div class="flex items-center ps-3">
+                        <input id="vue-checkbox-list" type="checkbox" value=""
+                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
+                        <label for="vue-checkbox-list" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">BLUD</label>
+                    </div>
+                </li>
+                <li class="w-full border-b border-gray-200 dark:border-gray-600 sm:border-b-0 sm:border-r">
+                    <div class="flex items-center ps-3">
+                        <input id="react-checkbox-list" type="checkbox" value=""
+                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
+                        <label for="react-checkbox-list" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">Non-BLUD</label>
+                    </div>
+                </li>
+                <li class="w-full border-b border-gray-200 dark:border-gray-600 sm:border-b-0 sm:border-r">
+                    <div class="flex items-center ps-3">
+                        <input id="angular-checkbox-list" type="checkbox" value=""
+                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
+                        <label for="angular-checkbox-list" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">Rawat Inap</label>
+                    </div>
+                </li>
+                <li class="w-full dark:border-gray-600">
+                    <div class="flex items-center ps-3">
+                        <input id="laravel-checkbox-list" type="checkbox" value=""
+                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
+                        <label for="laravel-checkbox-list" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">Non-Rawat
+                            Inap</label>
+                    </div>
+                </li>
+            </ul>
+            {{-- Section 2.2 --}}
+            <h3 class="mb-4 font-semibold text-gray-900 dark:text-white">2. Status Akreditasi Puskesmas</h3>
+            <ul
+                class="w-full items-center rounded-lg border border-gray-200 bg-white text-sm font-medium text-gray-900 dark:border-gray-600 dark:bg-gray-700 dark:text-white sm:flex">
+                <li class="w-full border-b border-gray-200 dark:border-gray-600 sm:border-b-0 sm:border-r">
+                    <div class="flex items-center ps-3">
+                        <input id="vue-checkbox-list" type="checkbox" value=""
+                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
+                        <label for="vue-checkbox-list" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">Dasar</label>
+                    </div>
+                </li>
+                <li class="w-full border-b border-gray-200 dark:border-gray-600 sm:border-b-0 sm:border-r">
+                    <div class="flex items-center ps-3">
+                        <input id="react-checkbox-list" type="checkbox" value=""
+                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
+                        <label for="react-checkbox-list" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">Madya</label>
+                    </div>
+                </li>
+                <li class="w-full border-b border-gray-200 dark:border-gray-600 sm:border-b-0 sm:border-r">
+                    <div class="flex items-center ps-3">
+                        <input id="angular-checkbox-list" type="checkbox" value=""
+                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
+                        <label for="angular-checkbox-list" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">Utama</label>
+                    </div>
+                </li>
+                <li class="w-full dark:border-gray-600">
+                    <div class="flex items-center ps-3">
+                        <input id="laravel-checkbox-list" type="checkbox" value=""
+                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
+                        <label for="laravel-checkbox-list" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">Paripurna</label>
+                    </div>
+                </li>
+                <li class="w-full dark:border-gray-600">
+                    <div class="flex items-center ps-3">
+                        <input id="laravel-checkbox-list" type="checkbox" value=""
+                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
+                        <label for="laravel-checkbox-list" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">Belum
+                            Terakreditasi</label>
+                    </div>
+                </li>
+            </ul>
+            {{-- Section 2.3 --}}
+            <h3 class="mb-4 font-semibold text-gray-900 dark:text-white">3. Penanggung Jawab Bagian Faramsi</h3>
+            <ul
+                class="w-full items-center rounded-lg border border-gray-200 bg-white text-sm font-medium text-gray-900 dark:border-gray-600 dark:bg-gray-700 dark:text-white sm:flex">
+                <li class="w-full border-b border-gray-200 dark:border-gray-600 sm:border-b-0 sm:border-r">
+                    <div class="flex items-center ps-3">
+                        <input id="vue-checkbox-list" type="checkbox" value=""
+                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
+                        <label for="vue-checkbox-list" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">Apoteker</label>
+                    </div>
+                </li>
+                <li class="w-full border-b border-gray-200 dark:border-gray-600 sm:border-b-0 sm:border-r">
+                    <div class="flex items-center ps-3">
+                        <input id="react-checkbox-list" type="checkbox" value=""
+                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
+                        <label for="react-checkbox-list" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">Dokter Gigi</label>
+                    </div>
+                </li>
+                <li class="w-full border-b border-gray-200 dark:border-gray-600 sm:border-b-0 sm:border-r">
+                    <div class="flex items-center ps-3">
+                        <input id="angular-checkbox-list" type="checkbox" value=""
+                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
+                        <label for="angular-checkbox-list" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">TTK</label>
+                    </div>
+                </li>
+                <li class="w-full dark:border-gray-600">
+                    <div class="flex items-center ps-3">
+                        <input id="laravel-checkbox-list" type="checkbox" value=""
+                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
+                        <label for="laravel-checkbox-list" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">Perawat</label>
+                    </div>
+                </li>
+                <li class="w-full dark:border-gray-600">
+                    <div class="flex items-center ps-3">
+                        <input id="laravel-checkbox-list" type="checkbox" value=""
+                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
+                        <label for="laravel-checkbox-list" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">Asisten
+                            Apoteker</label>
+                    </div>
+                </li>
+                <li class="w-full dark:border-gray-600">
+                    <div class="flex items-center ps-3">
+                        <input id="laravel-checkbox-list" type="checkbox" value=""
+                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
+                        <label for="laravel-checkbox-list" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">Bidan</label>
+                    </div>
+                </li>
+                <li class="w-full dark:border-gray-600">
+                    <div class="flex items-center ps-3">
+                        <input id="laravel-checkbox-list" type="checkbox" value=""
+                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
+                        <label for="laravel-checkbox-list" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">Dokter</label>
+                    </div>
+                </li>
+                <li class="w-full dark:border-gray-600">
+                    <div class="flex items-center ps-3">
+                        <input id="laravel-checkbox-list" type="checkbox" value=""
+                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
+                        <label for="laravel-checkbox-list" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">Lainnya</label>
+                    </div>
+                </li>
+            </ul>
+            {{-- Section 2.4 --}}
+            <h3 class="mb-4 font-semibold text-gray-900 dark:text-white">4. Tenaga/Personel Yang Melakukan Praktik Kefarmasian (Jawaban dapat lebih dari satu)
+            </h3>
+            <ul
+                class="w-full items-center rounded-lg border border-gray-200 bg-white text-sm font-medium text-gray-900 dark:border-gray-600 dark:bg-gray-700 dark:text-white sm:flex">
+                <li class="w-full border-b border-gray-200 dark:border-gray-600 sm:border-b-0 sm:border-r">
+                    <div class="flex items-center ps-3">
+                        <input id="vue-checkbox-list" type="checkbox" value=""
+                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
+                        <label for="vue-checkbox-list" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">Apoteker</label>
+                    </div>
+                </li>
+                <li class="w-full border-b border-gray-200 dark:border-gray-600 sm:border-b-0 sm:border-r">
+                    <div class="flex items-center ps-3">
+                        <input id="react-checkbox-list" type="checkbox" value=""
+                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
+                        <label for="react-checkbox-list" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">Dokter Gigi</label>
+                    </div>
+                </li>
+                <li class="w-full border-b border-gray-200 dark:border-gray-600 sm:border-b-0 sm:border-r">
+                    <div class="flex items-center ps-3">
+                        <input id="angular-checkbox-list" type="checkbox" value=""
+                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
+                        <label for="angular-checkbox-list" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">TTK</label>
+                    </div>
+                </li>
+                <li class="w-full dark:border-gray-600">
+                    <div class="flex items-center ps-3">
+                        <input id="laravel-checkbox-list" type="checkbox" value=""
+                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
+                        <label for="laravel-checkbox-list" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">Perawat</label>
+                    </div>
+                </li>
+                <li class="w-full dark:border-gray-600">
+                    <div class="flex items-center ps-3">
+                        <input id="laravel-checkbox-list" type="checkbox" value=""
+                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
+                        <label for="laravel-checkbox-list" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">Asisten
+                            Apoteker</label>
+                    </div>
+                </li>
+                <li class="w-full dark:border-gray-600">
+                    <div class="flex items-center ps-3">
+                        <input id="laravel-checkbox-list" type="checkbox" value=""
+                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
+                        <label for="laravel-checkbox-list" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">Bidan</label>
+                    </div>
+                </li>
+                <li class="w-full dark:border-gray-600">
+                    <div class="flex items-center ps-3">
+                        <input id="laravel-checkbox-list" type="checkbox" value=""
+                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
+                        <label for="laravel-checkbox-list" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">Dokter</label>
+                    </div>
+                </li>
+                <li class="w-full dark:border-gray-600">
+                    <div class="flex items-center ps-3">
+                        <input id="laravel-checkbox-list" type="checkbox" value=""
+                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
+                        <label for="laravel-checkbox-list" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">Lainnya</label>
+                    </div>
+                </li>
+            </ul>
+            {{-- Section 2.5 --}}
+            <h3 class="mb-4 font-semibold text-gray-900 dark:text-white">5. Apakah Puskesmas memiliki sistem pengadaan obat secara mandiri selain dari
+                Instalasi Farmasi Daerah?</h3>
+            <ul
+                class="w-full items-center rounded-lg border border-gray-200 bg-white text-sm font-medium text-gray-900 dark:border-gray-600 dark:bg-gray-700 dark:text-white sm:flex">
+                <li class="w-full border-b border-gray-200 dark:border-gray-600 sm:border-b-0 sm:border-r">
+                    <div class="flex items-center ps-3">
+                        <input id="vue-checkbox-list" type="checkbox" value=""
+                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
+                        <label for="vue-checkbox-list" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">Ya</label>
+                    </div>
+                </li>
+                <li class="w-full border-b border-gray-200 dark:border-gray-600 sm:border-b-0 sm:border-r">
+                    <div class="flex items-center ps-3">
+                        <input id="react-checkbox-list" type="checkbox" value=""
+                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
+                        <label for="react-checkbox-list" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">Tidak</label>
+                    </div>
+                </li>
+            </ul>
+            {{-- Section 2.6 --}}
+            <h3 class="mb-4 font-semibold text-gray-900 dark:text-white">6. Jumlah Resep Rata-Rata per Hari</h3>
+            <ul
+                class="w-full items-center rounded-lg border border-gray-200 bg-white text-sm font-medium text-gray-900 dark:border-gray-600 dark:bg-gray-700 dark:text-white sm:flex">
+                <input type="text" id="person2" name="person2"
+                    class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
+                    placeholder="0000" required />
+                <label for="react-checkbox-list" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">resep/hari</label>
+            </ul>
+            {{-- Section 2.7 --}}
+            <h3 class="mb-4 font-semibold text-gray-900 dark:text-white">7. Pemanfaatan IT/Aplikasi/Sistem Elektronik</h3>
+            <ul
+                class="w-full items-center rounded-lg border border-gray-200 bg-white text-sm font-medium text-gray-900 dark:border-gray-600 dark:bg-gray-700 dark:text-white sm:flex">
+                <li class="w-full border-b border-gray-200 dark:border-gray-600 sm:border-b-0 sm:border-r">
+                    <div class="flex items-center ps-3">
+                        <input id="vue-checkbox-list" type="checkbox" value=""
+                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
+                        <label for="vue-checkbox-list" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">Resep Elektronik</label>
+                    </div>
+                </li>
+                <li class="w-full border-b border-gray-200 dark:border-gray-600 sm:border-b-0 sm:border-r">
+                    <div class="flex items-center ps-3">
+                        <input id="react-checkbox-list" type="checkbox" value=""
+                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
+                        <label for="react-checkbox-list" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">K. Stok
+                            Elektronik</label>
+                    </div>
+                </li>
+                <li class="w-full border-b border-gray-200 dark:border-gray-600 sm:border-b-0 sm:border-r">
+                    <div class="flex items-center ps-3">
+                        <input id="react-checkbox-list" type="checkbox" value=""
+                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
+                        <label for="react-checkbox-list" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">SP Elektronik</label>
+                    </div>
+                </li>
+                <li class="w-full border-b border-gray-200 dark:border-gray-600 sm:border-b-0 sm:border-r">
+                    <div class="flex items-center ps-3">
+                        <input id="react-checkbox-list" type="checkbox" value=""
+                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
+                        <label for="react-checkbox-list" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">Manual/Belum ada
+                            pemanfaatan IT</label>
+                    </div>
+                </li>
+            </ul>
+            {{-- Section 2.8 --}}
+            <h3 class="mb-4 font-semibold text-gray-900 dark:text-white">8. Jenis Obat/Bahan Obat Yang Dikelola</h3>
+            <ul
+                class="w-full items-center rounded-lg border border-gray-200 bg-white text-sm font-medium text-gray-900 dark:border-gray-600 dark:bg-gray-700 dark:text-white sm:flex">
+                <li class="w-full border-b border-gray-200 dark:border-gray-600 sm:border-b-0 sm:border-r">
+                    <div class="flex items-center ps-3">
+                        <input id="vue-checkbox-list" type="checkbox" value=""
+                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
+                        <label for="vue-checkbox-list" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">Narkotika</label>
+                    </div>
+                </li>
+                <li class="w-full border-b border-gray-200 dark:border-gray-600 sm:border-b-0 sm:border-r">
+                    <div class="flex items-center ps-3">
+                        <input id="react-checkbox-list" type="checkbox" value=""
+                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
+                        <label for="react-checkbox-list" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">Prekursor</label>
+                    </div>
+                </li>
+                <li class="w-full border-b border-gray-200 dark:border-gray-600 sm:border-b-0 sm:border-r">
+                    <div class="flex items-center ps-3">
+                        <input id="react-checkbox-list" type="checkbox" value=""
+                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
+                        <label for="react-checkbox-list" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">Vaksin</label>
+                    </div>
+                </li>
+                <li class="w-full border-b border-gray-200 dark:border-gray-600 sm:border-b-0 sm:border-r">
+                    <div class="flex items-center ps-3">
+                        <input id="react-checkbox-list" type="checkbox" value=""
+                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
+                        <label for="react-checkbox-list" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">Antibiotik</label>
+                    </div>
+                </li>
+                <li class="w-full border-b border-gray-200 dark:border-gray-600 sm:border-b-0 sm:border-r">
+                    <div class="flex items-center ps-3">
+                        <input id="react-checkbox-list" type="checkbox" value=""
+                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
+                        <label for="react-checkbox-list" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">OOT</label>
+                    </div>
+                </li>
+                <li class="w-full border-b border-gray-200 dark:border-gray-600 sm:border-b-0 sm:border-r">
+                    <div class="flex items-center ps-3">
+                        <input id="react-checkbox-list" type="checkbox" value=""
+                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
+                        <label for="react-checkbox-list" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">CPP Lain</label>
+                    </div>
+                </li>
+                <li class="w-full border-b border-gray-200 dark:border-gray-600 sm:border-b-0 sm:border-r">
+                    <div class="flex items-center ps-3">
+                        <input id="react-checkbox-list" type="checkbox" value=""
+                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
+                        <label for="react-checkbox-list" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">Psikotropika</label>
+                    </div>
+                </li>
+                <li class="w-full border-b border-gray-200 dark:border-gray-600 sm:border-b-0 sm:border-r">
+                    <div class="flex items-center ps-3">
+                        <input id="react-checkbox-list" type="checkbox" value=""
+                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
+                        <label for="react-checkbox-list" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">Bahan Obat</label>
+                    </div>
+                </li>
+                <li class="w-full border-b border-gray-200 dark:border-gray-600 sm:border-b-0 sm:border-r">
+                    <div class="flex items-center ps-3">
+                        <input id="react-checkbox-list" type="checkbox" value=""
+                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
+                        <label for="react-checkbox-list" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">Obat Lain</label>
+                    </div>
+                </li>
+                <li class="w-full border-b border-gray-200 dark:border-gray-600 sm:border-b-0 sm:border-r">
+                    <div class="flex items-center ps-3">
+                        <input id="react-checkbox-list" type="checkbox" value=""
+                            class="h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
+                        <label for="react-checkbox-list" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">Obat Special Access
+                            Scheme (SAS)</label>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        {{-- Section 3 --}}
+        <div class="hidden w-full rounded-lg bg-gray-50 p-4 dark:bg-gray-800" id="assessment" role="tabpanel" aria-labelledby="assessment-tab">
+            <h3 class="mb-2 text-lg font-bold text-gray-900 dark:text-white">Assessment</h3>
+
+        </div>
+
     </div>
 
 </x-layouts>
