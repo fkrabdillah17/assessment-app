@@ -134,59 +134,31 @@
 
             <h3 class="mb-4 font-semibold text-gray-900 dark:text-white">1. Apakah pengadaan obat dilakukan melalui sumber resmi yaitu Instalasi Farmasi Daerah
                 dan/atau PBF dan/atau Apotek (dalam hal terjadi kekosongan stok atau kelangkaan obat) dan/atau Puskesmas lain dalam satu Kabupaten/Kota (dalam
-                hal terjadi kekosongan stok di Instalasi Farmasi Daerah) (pilih salah satu)</h3>
+                hal terjadi kekosongan stok di Instalasi Farmasi Daerah) (pilih salah satu) N:<span id="Q1_score"></span></h3>
             <ul
                 class="w-full rounded-lg border border-gray-200 bg-white text-sm font-medium text-gray-900 dark:border-gray-600 dark:bg-gray-700 dark:text-white">
-                <li class="w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600">
-                    <div class="flex items-center ps-3">
-                        <input id="list-radio-license" type="radio" value="" name="list-radio"
-                            class="h-4 w-4 border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
-                        <label for="list-radio-license" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">Ya(100) </label>
-                    </div>
-                </li>
-                <li class="w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600">
-                    <div class="flex items-center ps-3">
-                        <input id="list-radio-id" type="radio" value="" name="list-radio"
-                            class="h-4 w-4 border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
-                        <label for="list-radio-id" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">Sebagian Besar(50)</label>
-                    </div>
-                </li>
-                <li class="w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600">
-                    <div class="flex items-center ps-3">
-                        <input id="list-radio-military" type="radio" value="" name="list-radio"
-                            class="h-4 w-4 border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
-                        <label for="list-radio-military" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">Sebagian
-                            Kecil(25)</label>
-                    </div>
-                </li>
-                <li class="w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600">
-                    <div class="flex items-center ps-3">
-                        <input id="list-radio-passport" type="radio" value="" name="list-radio"
-                            class="h-4 w-4 border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
-                        <label for="list-radio-passport" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">Tidak(0)</label>
-                    </div>
-                </li>
-                <li class="w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600">
-                    <div class="flex items-center ps-3">
-                        <input id="list-radio-passport2" type="radio" value="" name="list-radio"
-                            class="h-4 w-4 border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500 dark:border-gray-500 dark:bg-gray-600 dark:ring-offset-gray-700 dark:focus:ring-blue-600 dark:focus:ring-offset-gray-700">
-                        <label for="list-radio-passport2" class="ms-2 w-full py-3 text-sm font-medium text-gray-900 dark:text-gray-300">Sebagian atau
-                            seluruhnya berasal dari Freelance/sarana illegal (Skor 0)</label>
-                    </div>
-                </li>
+                <x-input-radio id="Q1A" name="Q1" value="100" label="Q1A" onclick="toggleAlternate('Q1')">Ya(100)</x-input-radio>
+                <x-input-radio id="Q1B" name="Q1" value="50" label="Q1B" onclick="toggleAlternate('Q1')">Sebagian
+                    Besar(50)</x-input-radio>
+                <x-input-radio id="Q1C" name="Q1" value="25" label="Q1C" onclick="toggleAlternate('Q1')">Sebagian
+                    Kecil(25)</x-input-radio>
+                <x-input-radio id="Q1D" name="Q1" value="0" label="Q1D" onclick="toggleAlternate('Q1')">Tidak(0)</x-input-radio>
+                <x-input-radio id="Q1E" name="Q1" value="0" label="Q1E" onclick="toggleAlternate('Q1')">Sebagian atau seluruhnya berasal
+                    dari Freelance/sarana illegal
+                    (Skor 0)</x-input-radio>
             </ul>
-            <div id="alternate">
+            <div id="Q1_alternate" class="hidden">
                 <h3 class="mb-4 font-semibold text-gray-900 dark:text-white">Jika memilih “Sebagian Besar” atau “Sebagian Kecil” atau “Tidak” sebutkan sumber
                     pengadaan obat: (Jawaban dapat lebih dari satu)</h3>
                 <ul
                     class="w-full items-center rounded-lg border border-gray-200 bg-white text-sm font-medium text-gray-900 dark:border-gray-600 dark:bg-gray-700 dark:text-white sm:flex">
-                    <x-input-checkbox type="checkbox" id="Q1A" name="Q1A" value="Q1A">Apotek</x-input-checkbox>
-                    <x-input-checkbox type="checkbox" id="Q1B" name="Q1B" value="Q1B">Rumah Sakit</x-input-checkbox>
-                    <x-input-checkbox type="checkbox" id="Q1C" name="Q1C" value="Q1C">Toko Obat</x-input-checkbox>
-                    <x-input-checkbox type="checkbox" id="Q1D" name="Q1D" value="Q1D">Klinik</x-input-checkbox>
-                    <x-input-checkbox type="checkbox" id="Q1E" name="Q1E" value="Q1E">Puskesmas</x-input-checkbox>
-                    <x-input-checkbox type="checkbox" id="Q1F" name="Q1F" value="Q1F">Industri Farmasi</x-input-checkbox>
-                    <x-input-checkbox type="checkbox" id="Q1G" name="Q1G" value="Q1G">Praktek Mandiri</x-input-checkbox>
+                    <x-input-checkbox type="checkbox" id="AQ1A" name="AQ1A" value="AQ1A">Apotek</x-input-checkbox>
+                    <x-input-checkbox type="checkbox" id="AQ1B" name="AQ1B" value="AQ1B">Rumah Sakit</x-input-checkbox>
+                    <x-input-checkbox type="checkbox" id="AQ1C" name="AQ1C" value="AQ1C">Toko Obat</x-input-checkbox>
+                    <x-input-checkbox type="checkbox" id="AQ1D" name="AQ1D" value="AQ1D">Klinik</x-input-checkbox>
+                    <x-input-checkbox type="checkbox" id="AQ1E" name="AQ1E" value="AQ1E">Puskesmas</x-input-checkbox>
+                    <x-input-checkbox type="checkbox" id="AQ1F" name="AQ1F" value="AQ1F">Industri Farmasi</x-input-checkbox>
+                    <x-input-checkbox type="checkbox" id="AQ1G" name="AQ1G" value="AQ1G">Praktek Mandiri</x-input-checkbox>
                 </ul>
             </div>
 
