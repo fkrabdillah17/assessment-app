@@ -25,3 +25,45 @@ function toggleAlternate(questionId) {
     let scoreElement = document.getElementById(questionId + "_score");
     scoreElement.innerHTML = selectedOption.value;
 }
+
+function toggleScore(questionId) {
+    let listQuestionId = ["Q4", "Q6"];
+    function checkId(questionId) {
+        listQuestionId.includes(questionId);
+    }
+    if (!checkId) {
+        var selectedOption = document.querySelector(
+            'input[name="' + questionId + '"]:checked'
+        );
+
+        let scoreElement = document.getElementById(questionId + "_score");
+        scoreElement.innerHTML = selectedOption.value;
+    } else {
+        let checkboxs = document.querySelectorAll(
+            'input[type="checkbox"][id^="' + questionId + '"'
+        );
+
+        let count = 0;
+        let length = 0;
+        checkboxs.forEach(function (checkbox) {
+            if (!checkbox.value.includes("0")) {
+                length++;
+                if (checkbox.checked) {
+                    count++;
+                }
+            } else {
+                if (checkbox.checked) {
+                    count = 0;
+                    checkboxs.forEach(function (checkbox) {
+                        if (!checkbox.value.includes("0")) {
+                            checkbox.checked = false;
+                        }
+                    });
+                }
+            }
+        });
+        let scoreElement = document.getElementById(questionId + "_score");
+        let score = (count / length) * 100;
+        scoreElement.innerHTML = score.toFixed(2);
+    }
+}
